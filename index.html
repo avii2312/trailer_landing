@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seekho — Coming Soon</title>
+  <meta name="description" content="What if knowledge had no price? Seekho is a new way to learn — coming soon." />
+  <meta property="og:title" content="Seekho — Coming Soon" />
+  <meta property="og:description" content="The platform where you teach what you know and learn what you don't." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --pink: #FF2E97;
+      --lime: #B8FF00;
+      --cyan: #00D4FF;
+      --yellow: #FFE600;
+      --lavender: #C8A2FF;
+    }
+
+    ::selection { background: var(--pink); color: white; }
+
+    body {
+      background: var(--bg);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════ CINEMATIC TRAILER MODE ═══════════════ */
+
+    /* Progress bar at top */
+    .trailer-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: rgba(255,255,255,0.1);
+      z-index: 1000;
+    }
+    .trailer-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--pink), var(--lime));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* Section nav dots */
+    .trailer-nav {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 1000;
+    }
+    .trailer-nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .trailer-nav-dot.active {
+      background: var(--pink);
+      transform: scale(1.5);
+    }
+    .trailer-nav-dot:hover {
+      background: rgba(255,255,255,0.5);
+    }
+
+    /* Play/Pause + Skip controls */
+    .trailer-controls {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 1000;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 3.5s;
+    }
+    .trailer-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .trailer-btn:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.4);
+    }
+    .trailer-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* Hide scroll hint in trailer mode */
+    .trailer-mode .scroll-hint {
+      display: none;
+    }
+
+    /* Mobile adjustments for trailer */
+    @media (max-width: 768px) {
+      .trailer-nav {
+        right: 12px;
+        gap: 8px;
+      }
+      .trailer-nav-dot {
+        width: 6px;
+        height: 6px;
+      }
+      .trailer-controls {
+        bottom: 16px;
+      }
+      .trailer-btn {
+        padding: 8px 16px;
+        font-size: 10px;
+      }
+    }
+
+    .font-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+
+    .font-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 10px;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Gradient orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .orb-pink  { width: 600px; height: 600px; background: radial-gradient(circle, var(--pink), transparent); opacity: 0.3; animation: orbFloat1 12s ease-in-out infinite; }
+    .orb-lime  { width: 500px; height: 500px; background: radial-gradient(circle, var(--lime), transparent); opacity: 0.2; right: 0; bottom: 0; animation: orbFloat2 15s ease-in-out infinite; }
+    .orb-cyan  { width: 400px; height: 400px; background: radial-gradient(circle, var(--cyan), transparent); opacity: 0.15; left: 50%; top: 33%; animation: orbFloat3 10s ease-in-out infinite; }
+
+    @keyframes orbFloat1 { 0%,100% { transform: translate(-20%, -10%); } 50% { transform: translate(20%, 15%); } }
+    @keyframes orbFloat2 { 0%,100% { transform: translate(10%, 10%); } 50% { transform: translate(-15%, -20%); } }
+    @keyframes orbFloat3 { 0%,100% { transform: translate(-50%, -10%); } 50% { transform: translate(-30%, 10%); } }
+
+    /* Grid overlay */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 0 24px;
+      max-width: 1100px;
+    }
+
+    /* Coming soon badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 9999px;
+      font-size: 11px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 32px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+    .badge-dot {
+      width: 8px; height: 8px;
+      background: var(--lime);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    /* Headline */
+    .hero-headline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 8rem);
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+      line-height: 0.85;
+      margin-bottom: 32px;
+    }
+    .hero-word {
+      display: inline-block;
+      margin-right: 0.25em;
+      opacity: 0;
+      transform: translateY(40px);
+      filter: blur(10px);
+      animation: wordReveal 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+    .hero-word.w-knowledge { color: var(--pink); }
+    .hero-word.w-price     { color: var(--lime); }
+
+    @keyframes wordReveal {
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,0.45);
+      max-width: 500px;
+      margin: 0 auto 48px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 2s;
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.3);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 2.5s;
+    }
+    .scroll-hint span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+    }
+    .scroll-arrow {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ─── Sections ─── */
+    .section { position: relative; padding: 128px 24px; overflow: hidden; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    /* Fade-in on scroll */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .fade-section.from-left  { transform: translateX(-40px); }
+    .fade-section.from-right { transform: translateX(40px); }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    /* Brand reveal */
+    .brand-badge {
+      display: inline-block;
+      background: var(--pink);
+      padding: 8px 24px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      border: 3px solid rgba(255,255,255,0.2);
+      box-shadow: 6px 6px 0 var(--lime);
+    }
+
+    .brand-tagline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.4rem, 3vw, 2.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      max-width: 700px;
+      margin: 24px auto 0;
+    }
+    .brand-tagline .cyan   { color: var(--cyan); }
+    .brand-tagline .yellow { color: var(--yellow); }
+
+    .brand-sub {
+      color: rgba(255,255,255,0.4);
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      max-width: 500px;
+      margin: 24px auto 0;
+    }
+
+    /* ─── Feature Grid ─── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 128px;
+    }
+    @media (max-width: 768px) {
+      .feature-grid { grid-template-columns: 1fr; gap: 40px; }
+      .feature-grid.reverse > *:first-child { order: 2; }
+      .feature-grid.reverse > *:last-child  { order: 1; }
+    }
+
+    .feature-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+      border: 1px solid;
+    }
+    .feature-tag.pink   { color: var(--pink);   background: rgba(255,46,151,0.1);  border-color: rgba(255,46,151,0.3); }
+    .feature-tag.lime   { color: var(--lime);   background: rgba(184,255,0,0.1);   border-color: rgba(184,255,0,0.3); }
+    .feature-tag.yellow { color: var(--yellow); background: rgba(255,230,0,0.1);   border-color: rgba(255,230,0,0.3); }
+
+    .feature-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .feature-title .pink   { color: var(--pink); }
+    .feature-title .lime   { color: var(--lime); }
+    .feature-title .yellow { color: var(--yellow); }
+
+    .feature-desc {
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+
+    /* ─── Fake app cards ─── */
+    .app-card {
+      background: #13131a;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    .avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .mini-avatar {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 4px 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .progress-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--pink), var(--lime));
+      border-radius: 4px;
+      width: 0;
+      transition: width 1.5s ease 0.5s;
+    }
+    .visible .progress-fill { width: 98%; }
+
+    .floating-badge {
+      position: absolute;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--bg);
+    }
+    .floating-badge.star   { background: var(--yellow); top: -16px; right: -16px; animation: float1 3s ease-in-out infinite; }
+    .floating-badge.heart  { background: var(--lavender); bottom: -12px; left: -12px; animation: float2 2.5s ease-in-out infinite 0.5s; }
+    .floating-badge.zap    { background: var(--pink); top: -12px; right: -12px; animation: spin-slow 8s linear infinite; }
+
+    @keyframes float1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+    /* Aura number animation */
+    .aura-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 4rem;
+      color: var(--yellow);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 0.6s ease 0.3s, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+    }
+    .visible .aura-number { opacity: 1; transform: scale(1); }
+
+    .badge-icon {
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.3s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .visible .badge-icon { opacity: 1; transform: scale(1); }
+    .visible .badge-icon:nth-child(1) { transition-delay: 0.5s; }
+    .visible .badge-icon:nth-child(2) { transition-delay: 0.6s; }
+    .visible .badge-icon:nth-child(3) { transition-delay: 0.7s; }
+    .visible .badge-icon:nth-child(4) { transition-delay: 0.8s; }
+
+    /* ─── Ticker ─── */
+    .ticker-section {
+      padding: 48px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      overflow: hidden;
+    }
+    .ticker-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 30s linear infinite;
+    }
+    .ticker-group {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      margin: 0 24px;
+    }
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.2);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    .ticker-dot {
+      width: 6px; height: 6px;
+      background: var(--pink);
+      border-radius: 50%;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.333%); }
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      position: relative;
+      padding: 128px 24px;
+      overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .cta-glow div {
+      width: 600px; height: 600px;
+      background: rgba(255,46,151,0.1);
+      border-radius: 50%;
+      filter: blur(150px);
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .cta-title .pink { color: var(--pink); }
+    .cta-sub {
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+      max-width: 400px;
+      margin: 0 auto 40px;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 12px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      .email-form { flex-direction: column; }
+    }
+    .email-input {
+      flex: 1;
+      padding: 14px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 0;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .email-input::placeholder { color: rgba(255,255,255,0.25); }
+    .email-input:focus { border-color: var(--pink); }
+
+    .submit-btn {
+      padding: 14px 24px;
+      background: var(--pink);
+      color: #fff;
+      border: 1px solid var(--pink);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .submit-btn:hover { background: #e0267f; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .success-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+    .success-circle {
+      width: 64px; height: 64px;
+      background: var(--lime);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes popIn { from { transform: scale(0); } to { transform: scale(1); } }
+
+    .fine-print {
+      color: rgba(255,255,255,0.2);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 16px;
+    }
+
+    /* ─── Footer ─── */
+    .site-footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 32px 24px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand .logo-text {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+    .footer-brand .sep {
+      color: rgba(255,255,255,0.2);
+      font-size: 12px;
+    }
+    .footer-brand .status {
+      color: rgba(255,255,255,0.3);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-dev {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-dev span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-dev a { transition: opacity 0.3s; }
+    .footer-dev a:hover { opacity: 1 !important; }
+    .footer-dev img {
+      height: 32px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.6;
+    }
+
+    /* ─── General Animations ─── */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Hide scrollbar but keep scroll */
+    html { scroll-behavior: smooth; }
+    body::-webkit-scrollbar { display: none; }
+    body { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="orb orb-pink"></div>
+    <div class="orb orb-lime"></div>
+    <div class="orb orb-cyan"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Coming Soon
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="hero-word" style="animation-delay: 0.6s">What</span>
+        <span class="hero-word" style="animation-delay: 0.8s">if</span>
+        <span class="hero-word w-knowledge" style="animation-delay: 1.0s">knowledge</span>
+        <span class="hero-word" style="animation-delay: 1.2s">had</span>
+        <span class="hero-word" style="animation-delay: 1.4s">no</span>
+        <span class="hero-word w-price" style="animation-delay: 1.6s">price?</span>
+      </h1>
+
+      <p class="hero-sub">a new way to learn is loading...</p>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <svg class="scroll-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════ BRAND REVEAL ═══════════════ -->
+  <section class="section" id="brand">
+    <div class="section-inner" style="text-align: center;">
+      <div class="fade-section">
+        <div class="brand-badge">Seekho</div>
+      </div>
+      <div class="fade-section" style="transition-delay: 0.15s;">
+        <p class="brand-tagline">
+          The platform where you <span class="cyan">teach what you know</span> and <span class="yellow">learn what you don't</span>.
+        </p>
+      </div>
+      <div class="fade-section" style="transition-delay: 0.3s;">
+        <p class="brand-sub">No courses. No fees. Just people trading expertise — one skill at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURE 1 — DISCOVER ═══════════════ -->
+  <section class="section" id="feature1">
+    <div class="section-inner">
+      <div class="feature-grid">
+        <div class="fade-section from-left">
+          <span class="feature-tag pink">Discover</span>
+          <h3 class="feature-title">Find your<br/><span class="pink">perfect match</span></h3>
+          <p class="feature-desc">A guitarist who wants to code. A designer who craves cooking lessons. Everyone has something to offer — we help you find your person.</p>
+        </div>
+        <div class="fade-section from-right">
+          <div class="app-card">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <div class="avatar" style="background: linear-gradient(135deg, var(--pink), var(--lavender));">BP</div>
+              <div>
+                <div style="font-weight: 700; font-size: 14px;">Black Panther</div>
+                <div style="color: rgba(255,255,255,0.3); font-size: 12px;">98% match</div>
+              </div>
+              <div style="margin-left: auto; padding: 4px 12px; background: rgba(184,255,0,0.1); border: 1px solid rgba(184,255,0,0.3); color: var(--lime); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">520 Aura</div>
+            </div>
+            <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <span class="skill-tag">Teaches: Vibranium Tech</span>
+              <span class="skill-tag">Wants: Diplomacy</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="floating-badge star">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#0a0a0f" stroke="#0a0a0f" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURE 2 — COMMUNITY ═══════════════ -->
+  <section class="section" id="feature2">
+    <div class="section-inner">
+      <div class="feature-grid reverse">
+        <div class="fade-section from-right" style="order: 2;">
+          <span class="feature-tag lime">Community</span>
+          <h3 class="feature-title">Your squad,<br/><span class="lime">your rules</span></h3>
+          <p class="feature-desc">Create groups. Organize events. Build something together. It's not just learning — it's belonging.</p>
+        </div>
+        <div class="fade-section from-left" style="order: 1;">
+          <div class="app-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span style="font-weight: 700; font-size: 14px;">Avengers HQ</span>
+              </div>
+              <span style="font-size: 10px; color: rgba(255,255,255,0.3);">247 members</span>
+            </div>
+            <!-- Fake posts -->
+            <div style="padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                <div class="mini-avatar" style="background: var(--pink);">S</div>
+                <span style="font-size: 12px; font-weight: 700;">Spider-Man</span>
+                <span style="font-size: 10px; color: rgba(255,255,255,0.2); margin-left: auto;">2m</span>
+              </div>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.5); padding-left: 32px;">just built my first web-shooter upgrade using what i learned here!!</p>
+            </div>
+            <div style="padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                <div class="mini-avatar" style="background: var(--cyan);">T</div>
+                <span style="font-size: 12px; font-weight: 700;">Thor</span>
+                <span style="font-size: 10px; color: rgba(255,255,255,0.2); margin-left: auto;">15m</span>
+              </div>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.5); padding-left: 32px;">hosting a live session on lightning control tmrw @ 7pm ⚡</p>
+            </div>
+            <div class="floating-badge heart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#0a0a0f" stroke="#0a0a0f" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURE 3 — AURA ═══════════════ -->
+  <section class="section" id="feature3">
+    <div class="section-inner">
+      <div class="feature-grid">
+        <div class="fade-section from-left">
+          <span class="feature-tag yellow">Gamified</span>
+          <h3 class="feature-title">Earn <span class="yellow">Aura</span>,<br/>unlock rewards</h3>
+          <p class="feature-desc">Every session you teach earns Aura points. Climb the leaderboard, collect badges, and flex your expertise.</p>
+        </div>
+        <div class="fade-section from-right">
+          <div class="app-card" style="text-align: center;">
+            <div class="aura-number">2,450</div>
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.4); margin-bottom: 16px;">Aura Points</div>
+            <div style="display: flex; justify-content: center; gap: 12px;">
+              <div class="badge-icon">🔥</div>
+              <div class="badge-icon">⚡</div>
+              <div class="badge-icon">🎯</div>
+              <div class="badge-icon">💎</div>
+            </div>
+            <div class="floating-badge zap">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TICKER ═══════════════ -->
+  <section class="ticker-section" id="ticker">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span class="ticker-item"><span class="ticker-dot"></span>12,400+ early signups</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Coding</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Guitar</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Photography</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Cooking</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Languages</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Design</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Fitness</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Art</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Business</span>
+      </div>
+      <div class="ticker-group">
+        <span class="ticker-item"><span class="ticker-dot"></span>12,400+ early signups</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Coding</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Guitar</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Photography</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Cooking</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Languages</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Design</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Fitness</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Art</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Business</span>
+      </div>
+      <div class="ticker-group">
+        <span class="ticker-item"><span class="ticker-dot"></span>12,400+ early signups</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Coding</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Guitar</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Photography</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Cooking</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Languages</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Design</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Fitness</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Art</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA — EMAIL CAPTURE ═══════════════ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"><div></div></div>
+    <div class="cta-inner">
+      <div class="fade-section">
+        <h2 class="cta-title">Be the <span class="pink">first</span> to know</h2>
+      </div>
+      <div class="fade-section" style="transition-delay: 0.15s;">
+        <p class="cta-sub">Drop your email and we'll ping you when Seekho goes live. Early birds get exclusive perks.</p>
+      </div>
+      <div class="fade-section" style="transition-delay: 0.3s;">
+        <div id="form-container">
+          <form class="email-form" id="notify-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="waitlist" />
+            <p style="display:none"><input name="bot-field" /></p>
+            <input type="email" name="email" class="email-input" placeholder="ur email bestie..." required />
+            <button type="submit" class="submit-btn">
+              <span>Notify Me</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+          <p class="fine-print">No spam. Just one email when we launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Seekho</span>
+        <span class="sep">|</span>
+        <span class="status">Coming Soon</span>
+      </div>
+      <div class="footer-dev">
+        <span>Developed by</span>
+        <a href="https://visanet.in/" target="_blank" rel="noopener noreferrer" style="opacity: 0.6;">
+          <img src="assets/seekhofooter.png" alt="Visanet" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ═══════════════════════════════════════════════════════════
+    // CINEMATIC AUTO-SCROLL TRAILER SYSTEM
+    // ═══════════════════════════════════════════════════════════
+
+    (function() {
+      // Trailer sections in order with their display durations (ms)
+      const trailerPlan = [
+        { id: 'hero',     duration: 4000 },
+        { id: 'brand',    duration: 5000 },
+        { id: 'feature1', duration: 6000 },
+        { id: 'feature2', duration: 6000 },
+        { id: 'feature3', duration: 6000 },
+        { id: 'ticker',   duration: 4000 },
+        { id: 'cta',      duration: 8000 }
+      ];
+
+      let currentIndex = 0;
+      let isPlaying = true;
+      let sectionProgress = 0;
+      let progressInterval = null;
+      let userScrolled = false;
+
+      // Detect manual scroll to pause auto-play
+      let lastAutoScrollTime = 0;
+      window.addEventListener('wheel', () => {
+        if (Date.now() - lastAutoScrollTime > 600) {
+          userScrolled = true;
+          pauseTrailer();
+        }
+      }, { passive: true });
+      window.addEventListener('touchmove', () => {
+        if (Date.now() - lastAutoScrollTime > 600) {
+          userScrolled = true;
+          pauseTrailer();
+        }
+      }, { passive: true });
+
+      // Create UI
+      function createTrailerUI() {
+        // Progress bar
+        const progress = document.createElement('div');
+        progress.className = 'trailer-progress';
+        progress.innerHTML = '<div class="trailer-progress-bar"></div>';
+        document.body.appendChild(progress);
+
+        // Nav dots
+        const nav = document.createElement('div');
+        nav.className = 'trailer-nav';
+        trailerPlan.forEach((s, i) => {
+          const dot = document.createElement('div');
+          dot.className = 'trailer-nav-dot' + (i === 0 ? ' active' : '');
+          dot.addEventListener('click', () => goToSection(i));
+          nav.appendChild(dot);
+        });
+        document.body.appendChild(nav);
+
+        // Play/Pause + Skip controls
+        const controls = document.createElement('div');
+        controls.className = 'trailer-controls';
+        controls.innerHTML = `
+          <button class="trailer-btn" id="playPauseBtn">
+            <svg id="pauseIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+            <svg id="playIcon" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span id="playPauseText">Pause</span>
+          </button>
+          <button class="trailer-btn" id="skipBtn">
+            <span>Skip</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+          </button>
+        `;
+        document.body.appendChild(controls);
+
+        document.getElementById('playPauseBtn').addEventListener('click', togglePlayPause);
+        document.getElementById('skipBtn').addEventListener('click', skipToEnd);
+      }
+
+      // Smooth scroll to a section
+      function scrollToSection(index) {
+        const el = document.getElementById(trailerPlan[index].id);
+        if (!el) return;
+        lastAutoScrollTime = Date.now();
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      // Update nav dots
+      function updateDots(index) {
+        document.querySelectorAll('.trailer-nav-dot').forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      // Update progress bar (overall progress across all sections)
+      function updateProgressBar() {
+        const bar = document.querySelector('.trailer-progress-bar');
+        if (!bar) return;
+        let elapsed = 0;
+        for (let i = 0; i < currentIndex; i++) elapsed += trailerPlan[i].duration;
+        elapsed += sectionProgress;
+        const total = trailerPlan.reduce((a, b) => a + b.duration, 0);
+        bar.style.width = ((elapsed / total) * 100) + '%';
+      }
+
+      // Start the timed auto-advance for current section
+      function startSectionTimer() {
+        if (progressInterval) clearInterval(progressInterval);
+        sectionProgress = 0;
+        const tick = 50;
+        const duration = trailerPlan[currentIndex].duration;
+
+        progressInterval = setInterval(() => {
+          if (!isPlaying) return;
+          sectionProgress += tick;
+          updateProgressBar();
+
+          if (sectionProgress >= duration) {
+            advanceToNext();
+          }
+        }, tick);
+      }
+
+      // Advance to next section
+      function advanceToNext() {
+        if (progressInterval) clearInterval(progressInterval);
+        currentIndex++;
+        if (currentIndex >= trailerPlan.length) {
+          // Loop back to start
+          currentIndex = 0;
+        }
+        scrollToSection(currentIndex);
+        updateDots(currentIndex);
+        startSectionTimer();
+      }
+
+      // Go to specific section (from dot click)
+      function goToSection(index) {
+        if (progressInterval) clearInterval(progressInterval);
+        currentIndex = index;
+        userScrolled = false;
+        isPlaying = true;
+        updatePlayPauseUI();
+        scrollToSection(index);
+        updateDots(index);
+        startSectionTimer();
+      }
+
+      // Pause
+      function pauseTrailer() {
+        isPlaying = false;
+        updatePlayPauseUI();
+      }
+
+      // Toggle play/pause
+      function togglePlayPause() {
+        isPlaying = !isPlaying;
+        userScrolled = false;
+        updatePlayPauseUI();
+        if (isPlaying) {
+          // Resume from where we are
+          startSectionTimer();
+        }
+      }
+
+      function updatePlayPauseUI() {
+        const text = document.getElementById('playPauseText');
+        const pause = document.getElementById('pauseIcon');
+        const play = document.getElementById('playIcon');
+        if (!text) return;
+        if (isPlaying) {
+          text.textContent = 'Pause';
+          pause.style.display = 'block';
+          play.style.display = 'none';
+        } else {
+          text.textContent = 'Play';
+          pause.style.display = 'none';
+          play.style.display = 'block';
+        }
+      }
+
+      // Skip to end — show all content, stop trailer
+      function skipToEnd() {
+        if (progressInterval) clearInterval(progressInterval);
+        isPlaying = false;
+        // Scroll to CTA
+        const cta = document.getElementById('cta');
+        if (cta) cta.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Remove trailer UI after scroll
+        setTimeout(() => {
+          document.querySelector('.trailer-progress')?.remove();
+          document.querySelector('.trailer-nav')?.remove();
+          document.querySelector('.trailer-controls')?.remove();
+        }, 1500);
+      }
+
+      // Auto-start after hero animations (~3s)
+      function init() {
+        // Show controls immediately
+        document.body.classList.add('trailer-mode');
+        createTrailerUI();
+
+        // Wait for hero word animations to finish, then begin auto-scrolling
+        setTimeout(() => {
+          scrollToSection(0);
+          updateDots(0);
+          startSectionTimer();
+        }, 3000);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+
+    // ═══════════════════════════════════════════════════════════
+    // SCROLL ANIMATIONS (always active — triggered as sections come into view)
+    // ═══════════════════════════════════════════════════════════
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '-60px' });
+
+    document.querySelectorAll('.fade-section, .app-card').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Hero parallax on scroll
+    const hero = document.getElementById('hero');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const vh = window.innerHeight;
+      const progress = Math.min(scrollY / (vh * 0.5), 1);
+      hero.style.opacity = 1 - progress;
+      hero.style.transform = `scale(${1 - progress * 0.05})`;
+    }, { passive: true });
+
+    // Email form — submits to Netlify Forms
+    const form = document.getElementById('notify-form');
+    const container = document.getElementById('form-container');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = form.querySelector('input[type="email"]');
+      const btn = form.querySelector('button');
+      const email = input.value;
+
+      if (!email || !email.includes('@')) return;
+
+      // Show spinner
+      btn.disabled = true;
+      btn.innerHTML = '<div class="spinner"></div>';
+
+      try {
+        // Submit to Netlify Forms
+        const formData = new FormData(form);
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        });
+
+        // Show success
+        container.innerHTML = `
+          <div class="success-state">
+            <div class="success-circle">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0a0f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <p style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.25rem; text-transform: uppercase;">ur in bestie!</p>
+              <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin-top: 4px;">we'll hit u up when it's go time</p>
+            </div>
+          </div>
+        `;
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = '<span>Try Again</span>';
+      }
+    });
+  </script>
+
+</body>
+</html>
