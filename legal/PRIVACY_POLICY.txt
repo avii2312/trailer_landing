@@ -1,0 +1,446 @@
+================================================================================
+                       PRIVACY POLICY
+                      SEEKHO PLATFORM
+================================================================================
+
+Effective Date: _______________
+Last Updated: _______________
+Version: 1.0
+
+================================================================================
+                   TABLE OF CONTENTS
+================================================================================
+
+1.  Introduction
+2.  Information We Collect
+3.  How We Collect Information
+4.  How We Use Your Information
+5.  How We Share Your Information
+6.  Data Storage & Security
+7.  Cookies & Tracking
+8.  Your Rights
+9.  Children's Privacy
+10. Third-Party Links & Services
+11. Data Retention
+12. International Data
+13. Changes to This Policy
+14. Grievance Officer
+15. Contact Us
+
+================================================================================
+              1. INTRODUCTION
+================================================================================
+
+1.1  Seekho ("we", "us", "our", "Company") operates the Seekho platform
+     ("Platform") available at [your-domain.com] and associated mobile
+     applications.
+
+1.2  This Privacy Policy explains how we collect, use, disclose, and
+     protect your personal information when you use our Platform.
+
+1.3  By using the Platform, you consent to the practices described in
+     this Privacy Policy. If you do not agree, please do not use the
+     Platform.
+
+1.4  This policy is published in compliance with:
+     - Information Technology Act, 2000
+     - Information Technology (Reasonable Security Practices and
+       Procedures and Sensitive Personal Data or Information) Rules, 2011
+     - Digital Personal Data Protection Act, 2023 (DPDPA)
+
+================================================================================
+              2. INFORMATION WE COLLECT
+================================================================================
+
+------------------------------------------------------------------------
+A. INFORMATION YOU PROVIDE DIRECTLY
+------------------------------------------------------------------------
+
+ACCOUNT INFORMATION:
+- Full name
+- Email address
+- Phone number (optional)
+- Password (stored in encrypted/hashed form)
+- College/University name
+- Course and year of study
+- Profile photo (optional)
+
+PROFILE INFORMATION:
+- Skills you want to teach
+- Skills you want to learn
+- Bio/description
+- Social media links (optional)
+- Location (city/area)
+
+SESSION & INTERACTION DATA:
+- Session bookings and history
+- Reviews and ratings you give or receive
+- Messages sent through the platform chat
+- Community posts and comments
+
+VERIFICATION DATA:
+- College email address (for verification)
+- Student ID (if submitted for verification)
+
+------------------------------------------------------------------------
+B. INFORMATION COLLECTED AUTOMATICALLY
+------------------------------------------------------------------------
+
+DEVICE & TECHNICAL DATA:
+- IP address
+- Browser type and version
+- Operating system
+- Device type (desktop/mobile)
+- Screen resolution
+
+USAGE DATA:
+- Pages visited and features used
+- Time spent on the Platform
+- Click patterns and navigation paths
+- Search queries within the Platform
+- Session frequency and duration
+
+LOCATION DATA:
+- Approximate location based on IP address
+- Precise location (only if you explicitly grant permission for
+  location-based matching)
+
+------------------------------------------------------------------------
+C. INFORMATION FROM THIRD PARTIES
+------------------------------------------------------------------------
+
+- Authentication data from social login providers (Google, etc.)
+  if you choose to sign in via a third-party service
+- Publicly available information from your social media profiles
+  (only if you link them)
+
+================================================================================
+              3. HOW WE COLLECT INFORMATION
+================================================================================
+
+3.1  DIRECTLY: When you register, fill out your profile, send messages,
+     write reviews, or contact support.
+
+3.2  AUTOMATICALLY: Through cookies, log files, and similar tracking
+     technologies when you use the Platform.
+
+3.3  FROM THIRD PARTIES: When you sign in using a third-party service
+     (e.g., Google OAuth).
+
+================================================================================
+              4. HOW WE USE YOUR INFORMATION
+================================================================================
+
+We use your information for the following purposes:
+
+PLATFORM OPERATIONS:
+4.1  To create and manage your account.
+4.2  To match you with other Users based on skills and preferences.
+4.3  To facilitate session booking and communication.
+4.4  To display your profile to other Users for discovery.
+4.5  To manage communities and events.
+
+PERSONALIZATION:
+4.6  To recommend relevant skill matches.
+4.7  To customize your Platform experience.
+4.8  To display relevant community events near you.
+
+COMMUNICATION:
+4.9  To send session reminders and notifications.
+4.10 To send platform updates and announcements.
+4.11 To respond to your support requests.
+4.12 To send promotional communications (with your consent; you can
+     opt out at any time).
+
+SAFETY & SECURITY:
+4.13 To verify your identity and prevent fraud.
+4.14 To enforce our Terms and Conditions and Code of Conduct.
+4.15 To detect and prevent misuse or abuse of the Platform.
+4.16 To comply with legal obligations.
+
+ANALYTICS & IMPROVEMENT:
+4.17 To analyze usage patterns and improve the Platform.
+4.18 To conduct research and analytics.
+4.19 To test new features and functionality.
+4.20 To measure the effectiveness of our services.
+
+LEGAL BASIS FOR PROCESSING:
+4.21 Consent: For optional features like location sharing and marketing.
+4.22 Contract: To provide Platform services you signed up for.
+4.23 Legitimate Interest: For security, analytics, and improvement.
+4.24 Legal Obligation: To comply with applicable laws.
+
+================================================================================
+              5. HOW WE SHARE YOUR INFORMATION
+================================================================================
+
+We do NOT sell your personal data. We may share information as follows:
+
+WITH OTHER USERS:
+5.1  Your profile information (name, skills, bio, reviews) is visible
+     to other Platform Users. This is necessary for the skill matching
+     and exchange functionality.
+
+5.2  Your messages are shared only with the intended recipients.
+
+5.3  Your reviews are visible to the reviewed User and other Platform
+     Users.
+
+WITH SERVICE PROVIDERS:
+5.4  We may share data with trusted third-party service providers who
+     assist us in operating the Platform, including:
+     - Cloud hosting providers (for data storage)
+     - Email service providers (for notifications)
+     - Payment processors (for Premium Services)
+     - Analytics providers (for usage analytics)
+
+     These providers are contractually bound to use your data only for
+     the services they provide to us and to maintain appropriate security.
+
+WITH COMMUNITY AMBASSADORS:
+5.5  Ambassadors may have access to limited community member information
+     for moderation purposes only.
+
+FOR LEGAL REASONS:
+5.6  We may disclose your information if required by law, court order,
+     or government request.
+
+5.7  We may disclose information to protect the rights, property, or
+     safety of Seekho, our Users, or others.
+
+IN BUSINESS TRANSFERS:
+5.8  If Seekho is involved in a merger, acquisition, or sale of assets,
+     your information may be transferred. We will notify you before your
+     data is subject to a different privacy policy.
+
+AGGREGATED/ANONYMIZED DATA:
+5.9  We may share aggregated, anonymized data that cannot identify you
+     individually for research, analytics, or marketing purposes.
+
+================================================================================
+              6. DATA STORAGE & SECURITY
+================================================================================
+
+6.1  STORAGE: Your data is stored on secure servers located in India.
+
+6.2  SECURITY MEASURES: We implement reasonable security measures
+     including:
+     - Encryption of data in transit (HTTPS/TLS)
+     - Encryption of sensitive data at rest
+     - Password hashing (bcrypt or equivalent)
+     - Access controls and authentication
+     - Regular security assessments
+     - Rate limiting to prevent abuse
+     - Secure session management
+
+6.3  LIMITATIONS: While we take reasonable precautions, no method of
+     transmission or storage is 100% secure. We cannot guarantee absolute
+     security.
+
+6.4  BREACH NOTIFICATION: In the event of a data breach that affects
+     your personal information, we will:
+     a) Notify affected Users within 72 hours of becoming aware.
+     b) Notify the relevant Data Protection Authority as required.
+     c) Provide details of the breach and steps taken.
+     d) Advise on protective measures you can take.
+
+================================================================================
+              7. COOKIES & TRACKING
+================================================================================
+
+7.1  We use cookies and similar technologies for:
+
+     ESSENTIAL COOKIES: Required for Platform functionality (login,
+     session management). Cannot be disabled.
+
+     ANALYTICS COOKIES: Help us understand how Users interact with the
+     Platform. You can opt out.
+
+     PREFERENCE COOKIES: Remember your settings and preferences.
+
+7.2  You can manage cookie preferences through your browser settings.
+     Disabling essential cookies may affect Platform functionality.
+
+7.3  We do NOT use cookies for targeted advertising from third parties.
+
+================================================================================
+              8. YOUR RIGHTS
+================================================================================
+
+Under applicable Indian law (including DPDPA 2023), you have the right to:
+
+8.1  RIGHT TO ACCESS: Request a copy of the personal data we hold
+     about you.
+
+8.2  RIGHT TO CORRECTION: Request correction of inaccurate or
+     incomplete data.
+
+8.3  RIGHT TO ERASURE: Request deletion of your personal data, subject
+     to legal retention requirements.
+
+8.4  RIGHT TO WITHDRAW CONSENT: Withdraw consent for data processing
+     at any time (this does not affect prior processing).
+
+8.5  RIGHT TO DATA PORTABILITY: Request your data in a structured,
+     commonly used, machine-readable format.
+
+8.6  RIGHT TO NOMINATE: Nominate another person to exercise your rights
+     in case of death or incapacity.
+
+8.7  RIGHT TO GRIEVANCE REDRESSAL: File a complaint with our Grievance
+     Officer or the Data Protection Board of India.
+
+TO EXERCISE YOUR RIGHTS:
+- Email: ___________________________ (with subject "Data Rights Request")
+- In-app: Settings > Privacy > Data Request
+- We will respond within 30 days of receiving your request.
+- We may ask for identity verification before processing requests.
+
+================================================================================
+              9. CHILDREN'S PRIVACY
+================================================================================
+
+9.1  The Platform is not intended for children under 16 years of age.
+
+9.2  We do not knowingly collect personal data from children under 16.
+
+9.3  If we become aware that we have collected data from a child under
+     16 without verifiable parental consent, we will delete it promptly.
+
+9.4  If you believe we have collected data from a child under 16,
+     please contact us immediately.
+
+================================================================================
+              10. THIRD-PARTY LINKS & SERVICES
+================================================================================
+
+10.1 The Platform may contain links to third-party websites or services.
+
+10.2 We are NOT responsible for the privacy practices of third parties.
+
+10.3 We encourage you to read the privacy policies of any third-party
+     services you access through the Platform.
+
+10.4 Third-party integrations (Google Sign-In, payment processors) are
+     governed by their own privacy policies.
+
+================================================================================
+              11. DATA RETENTION
+================================================================================
+
+11.1 We retain your data for as long as your account is active.
+
+11.2 After account deletion:
+     - Profile data: Deleted within 30 days
+     - Messages: Deleted within 30 days
+     - Reviews: Anonymized (author name removed) but text retained
+       for platform integrity
+     - Usage/analytics data: Anonymized and retained for up to 2 years
+     - Legal/compliance data: Retained as required by law
+
+11.3 Backup copies may persist for up to 90 days after deletion.
+
+11.4 We may retain anonymized, aggregated data indefinitely.
+
+================================================================================
+              12. INTERNATIONAL DATA
+================================================================================
+
+12.1 The Platform primarily operates in India, and data is stored in
+     India.
+
+12.2 If you access the Platform from outside India, your data will be
+     transferred to and processed in India.
+
+12.3 By using the Platform, you consent to this transfer.
+
+================================================================================
+              13. CHANGES TO THIS POLICY
+================================================================================
+
+13.1 We may update this Privacy Policy from time to time.
+
+13.2 Material changes will be notified via:
+     a) Email notification
+     b) In-app notification
+     c) Prominent notice on the Platform
+
+13.3 Changes take effect 15 days after notification.
+
+13.4 Continued use after the effective date constitutes acceptance.
+
+13.5 If you disagree, you must stop using the Platform and may request
+     data deletion.
+
+================================================================================
+              14. GRIEVANCE OFFICER
+================================================================================
+
+In accordance with the Information Technology Act, 2000 and rules made
+thereunder, the Grievance Officer for the purpose of this Privacy Policy
+is:
+
+Name: ___________________________
+Designation: ___________________________
+Email: ___________________________
+Address: ___________________________, Maharashtra, India
+Working Hours: Monday to Friday, 10:00 AM to 6:00 PM IST
+
+The Grievance Officer shall address your concerns within 30 days of
+receiving a complaint.
+
+================================================================================
+              15. CONTACT US
+================================================================================
+
+For any questions, concerns, or requests regarding this Privacy Policy:
+
+Company Name: ___________________________
+Email: ___________________________
+Address: ___________________________, Maharashtra, India
+Website: ___________________________
+
+================================================================================
+              DATA PROCESSING SUMMARY TABLE
+================================================================================
+
++---------------------+-------------------+------------------+---------------+
+| Data Type           | Purpose           | Shared With      | Retention     |
++---------------------+-------------------+------------------+---------------+
+| Name, Email         | Account, Comms    | Other Users      | Until deleted |
+|                     |                   | (name only)      |               |
++---------------------+-------------------+------------------+---------------+
+| Skills, Bio         | Matching,         | Other Users      | Until deleted |
+|                     | Discovery         |                  |               |
++---------------------+-------------------+------------------+---------------+
+| Messages            | Communication     | Recipients only  | 30 days post  |
+|                     |                   |                  | deletion      |
++---------------------+-------------------+------------------+---------------+
+| Reviews             | Trust, Reputation | All Users        | Anonymized    |
+|                     |                   |                  | on deletion   |
++---------------------+-------------------+------------------+---------------+
+| Location            | Matching, Events  | Approximate only | Until deleted |
+|                     |                   | to other Users   |               |
++---------------------+-------------------+------------------+---------------+
+| Usage Data          | Analytics,        | Aggregated to    | 2 years       |
+|                     | Improvement       | service providers | (anonymized) |
++---------------------+-------------------+------------------+---------------+
+| Device/IP           | Security,         | Service providers| 1 year        |
+|                     | Analytics         |                  |               |
++---------------------+-------------------+------------------+---------------+
+| Payment Info        | Premium Services  | Payment processor| Per processor |
+|                     |                   | only             | policy        |
++---------------------+-------------------+------------------+---------------+
+
+================================================================================
+                   END OF PRIVACY POLICY
+================================================================================
+
+NOTE: This is a template Privacy Policy. Have it reviewed by a qualified
+legal professional before publishing. Ensure compliance with:
+- Information Technology Act, 2000
+- IT (Reasonable Security Practices) Rules, 2011
+- Digital Personal Data Protection Act, 2023 (DPDPA)
+- Any applicable state-specific regulations
+
+A Grievance Officer MUST be appointed before publishing this policy.

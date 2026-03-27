@@ -1,0 +1,249 @@
+================================================================================
+                    NON-DISCLOSURE AGREEMENT (NDA)
+                           SEEKHO PLATFORM
+================================================================================
+
+DATE: _______________
+
+BETWEEN:
+
+1. DISCLOSING PARTY ("Company"):
+   Seekho (operated by ___________________________)
+   Address: ___________________________, Maharashtra, India
+   Email: ___________________________
+   (Hereinafter referred to as "Seekho" or "Company")
+
+2. RECEIVING PARTY:
+   Name: ___________________________
+   Address: ___________________________
+   Email: ___________________________
+   Role/Relationship: ___________________________
+   (Hereinafter referred to as "Recipient")
+
+--------------------------------------------------------------------------------
+1. PURPOSE
+--------------------------------------------------------------------------------
+
+The Company intends to disclose certain confidential and proprietary information
+to the Recipient for the purpose of:
+
+[ ] Evaluating a potential business relationship
+[ ] Collaboration on platform development
+[ ] Campus Ambassador program participation
+[ ] Core Team membership
+[ ] Investment/partnership discussion
+[ ] Other: ___________________________
+
+--------------------------------------------------------------------------------
+2. DEFINITION OF CONFIDENTIAL INFORMATION
+--------------------------------------------------------------------------------
+
+"Confidential Information" includes, but is not limited to:
+
+a) SOURCE CODE & TECHNOLOGY: All source code, algorithms, matching systems,
+   database schemas, API designs, architecture documents, and technical
+   infrastructure of the Seekho platform.
+
+b) BUSINESS INFORMATION: Business plans, strategies, roadmaps, financial data,
+   revenue models, pricing strategies, marketing plans, user acquisition
+   strategies, and partnership details.
+
+c) USER DATA: Any and all user information, analytics, behavioral data,
+   community data, and engagement metrics collected through the platform.
+
+d) INTELLECTUAL PROPERTY: Designs, UI/UX mockups, branding materials, logos,
+   trademarks, trade secrets, and creative content.
+
+e) COMMUNITY STRATEGY: College community expansion plans, ambassador network
+   details, event strategies, and partnership pipelines.
+
+f) UNRELEASED FEATURES: Any features, products, or services that are in
+   development or planned but not yet publicly available.
+
+g) Any information marked as "Confidential" or that a reasonable person would
+   understand to be confidential given its nature and context.
+
+--------------------------------------------------------------------------------
+3. OBLIGATIONS OF THE RECIPIENT
+--------------------------------------------------------------------------------
+
+The Recipient agrees to:
+
+3.1  Hold all Confidential Information in strict confidence.
+
+3.2  Not disclose any Confidential Information to any third party without
+     prior written consent from the Company.
+
+3.3  Not use Confidential Information for any purpose other than the Purpose
+     stated in Section 1.
+
+3.4  Not copy, reproduce, reverse engineer, decompile, or create derivative
+     works based on the Confidential Information.
+
+3.5  Limit access to Confidential Information to only those individuals who
+     need to know for the stated Purpose and who are bound by similar
+     confidentiality obligations.
+
+3.6  Notify the Company immediately upon discovery of any unauthorized use
+     or disclosure of Confidential Information.
+
+3.7  Not directly or indirectly create, develop, or assist in creating a
+     competing product, service, or platform that is substantially similar
+     to Seekho or uses the Confidential Information.
+
+--------------------------------------------------------------------------------
+4. EXCLUSIONS
+--------------------------------------------------------------------------------
+
+Confidential Information does NOT include information that:
+
+a) Is or becomes publicly available through no fault of the Recipient.
+b) Was already known to the Recipient before disclosure, as proven by
+   written records.
+c) Is independently developed by the Recipient without use of or reference
+   to the Confidential Information.
+d) Is disclosed with the prior written approval of the Company.
+e) Is required to be disclosed by law or court order, provided the Recipient
+   gives the Company prompt written notice.
+
+--------------------------------------------------------------------------------
+5. TERM AND DURATION
+--------------------------------------------------------------------------------
+
+5.1  This Agreement is effective from the date first written above.
+
+5.2  The confidentiality obligations shall remain in effect for a period of
+     THREE (3) YEARS from the date of disclosure of the Confidential
+     Information, or until the information becomes publicly available
+     through no fault of the Recipient, whichever is earlier.
+
+5.3  Upon termination or expiration of this Agreement, or upon request by
+     the Company, the Recipient shall promptly return or destroy all
+     Confidential Information and any copies thereof.
+
+--------------------------------------------------------------------------------
+6. INTELLECTUAL PROPERTY
+--------------------------------------------------------------------------------
+
+6.1  No license, right, or interest in any intellectual property of the
+     Company is granted to the Recipient under this Agreement.
+
+6.2  All Confidential Information remains the sole property of the Company.
+
+6.3  Any ideas, suggestions, or improvements provided by the Recipient
+     regarding the Confidential Information shall become the property of
+     the Company.
+
+--------------------------------------------------------------------------------
+7. NON-COMPETE (Optional - Check if applicable)
+--------------------------------------------------------------------------------
+
+[ ] APPLICABLE: The Recipient agrees that during the term of this Agreement
+    and for a period of _____ months thereafter, the Recipient shall not
+    directly or indirectly engage in, own, manage, or participate in any
+    business that competes with Seekho's core offerings (peer-to-peer skill
+    exchange platform targeting college students in India).
+
+[ ] NOT APPLICABLE
+
+--------------------------------------------------------------------------------
+8. NON-SOLICITATION
+--------------------------------------------------------------------------------
+
+The Recipient agrees that during the term of this Agreement and for a period
+of twelve (12) months thereafter, the Recipient shall not:
+
+a) Solicit, recruit, or hire any employee, contractor, or team member of
+   the Company.
+b) Solicit or attempt to divert any user, community member, campus
+   ambassador, or business partner away from the Company.
+
+--------------------------------------------------------------------------------
+9. REMEDIES
+--------------------------------------------------------------------------------
+
+9.1  The Recipient acknowledges that any breach of this Agreement may cause
+     irreparable harm to the Company for which monetary damages may be
+     inadequate.
+
+9.2  The Company shall be entitled to seek injunctive relief, specific
+     performance, and any other equitable remedies in addition to any other
+     remedies available at law.
+
+9.3  In the event of a breach, the Recipient shall be liable for all damages
+     suffered by the Company, including but not limited to legal fees and
+     costs incurred in enforcing this Agreement.
+
+--------------------------------------------------------------------------------
+10. GOVERNING LAW AND JURISDICTION
+--------------------------------------------------------------------------------
+
+10.1  This Agreement shall be governed by and construed in accordance with
+      the laws of India, including but not limited to:
+      - The Indian Contract Act, 1872
+      - The Information Technology Act, 2000
+      - The Copyright Act, 1957
+
+10.2  Any disputes arising out of this Agreement shall be subject to the
+      exclusive jurisdiction of the courts in _______________, Maharashtra.
+
+--------------------------------------------------------------------------------
+11. GENERAL PROVISIONS
+--------------------------------------------------------------------------------
+
+11.1  ENTIRE AGREEMENT: This Agreement constitutes the entire agreement
+      between the parties regarding confidentiality and supersedes all prior
+      discussions and agreements.
+
+11.2  AMENDMENT: This Agreement may only be amended in writing signed by
+      both parties.
+
+11.3  SEVERABILITY: If any provision is found to be unenforceable, the
+      remaining provisions shall continue in full force and effect.
+
+11.4  WAIVER: Failure to enforce any provision shall not constitute a waiver
+      of future enforcement.
+
+11.5  ASSIGNMENT: The Recipient may not assign this Agreement without prior
+      written consent of the Company.
+
+--------------------------------------------------------------------------------
+SIGNATURES
+--------------------------------------------------------------------------------
+
+DISCLOSING PARTY (Seekho):
+
+Signature: ___________________________
+Name:      ___________________________
+Title:     ___________________________
+Date:      ___________________________
+
+
+RECEIVING PARTY:
+
+Signature: ___________________________
+Name:      ___________________________
+Title:     ___________________________
+Date:      ___________________________
+
+
+WITNESS 1:
+
+Signature: ___________________________
+Name:      ___________________________
+Date:      ___________________________
+
+
+WITNESS 2:
+
+Signature: ___________________________
+Name:      ___________________________
+Date:      ___________________________
+
+================================================================================
+                         END OF AGREEMENT
+================================================================================
+
+NOTE: This is a template NDA. It is strongly recommended to have this
+reviewed by a qualified legal professional before use. Laws may vary and
+this document should be customized to your specific situation.

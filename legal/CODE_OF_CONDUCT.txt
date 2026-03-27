@@ -1,0 +1,233 @@
+================================================================================
+                        SEEKHO COMMUNITY
+                        CODE OF CONDUCT
+================================================================================
+
+Last Updated: _______________
+Version: 1.0
+
+================================================================================
+                         OUR PLEDGE
+================================================================================
+
+Seekho is a peer-to-peer skill exchange platform built by students, for
+students. We are committed to creating a welcoming, inclusive, safe, and
+harassment-free experience for everyone — regardless of gender, gender
+identity, sexual orientation, disability, physical appearance, body size,
+race, ethnicity, age, religion, caste, nationality, or skill level.
+
+This Code of Conduct applies to ALL Seekho spaces, including but not limited
+to: the Seekho platform, college community chapters, in-person events,
+online sessions, social media groups, and any communication channels
+associated with Seekho.
+
+================================================================================
+                     OUR STANDARDS
+================================================================================
+
+------------------------------------------------------------------------
+EXPECTED BEHAVIOR (The Good Stuff)
+------------------------------------------------------------------------
+
+1. BE RESPECTFUL & KIND
+   - Treat everyone with dignity and respect.
+   - Use welcoming and inclusive language.
+   - Be considerate of differing viewpoints and experiences.
+
+2. BE HONEST & AUTHENTIC
+   - Represent your skills accurately. Don't claim expertise you don't have.
+   - Use your real identity. No fake profiles or impersonation.
+   - Give genuine, constructive feedback in reviews.
+
+3. BE A GOOD LEARNING PARTNER
+   - Show up on time for scheduled sessions.
+   - Come prepared and be an active participant.
+   - Cancel sessions with reasonable notice (at least 2 hours).
+   - Be patient — everyone learns at different speeds.
+
+4. PROTECT PRIVACY
+   - Don't share personal information of other users without consent.
+   - Don't screenshot or record sessions without explicit permission.
+   - Respect the confidentiality of conversations.
+
+5. CONTRIBUTE TO THE COMMUNITY
+   - Help newcomers feel welcome.
+   - Share knowledge freely and generously.
+   - Report violations when you see them.
+   - Support your campus ambassador and community events.
+
+6. GIVE CREDIT
+   - Acknowledge when you've learned something from someone.
+   - Don't pass off someone else's work or ideas as your own.
+
+------------------------------------------------------------------------
+UNACCEPTABLE BEHAVIOR (Zero Tolerance)
+------------------------------------------------------------------------
+
+1. HARASSMENT
+   - Sexual harassment, unwelcome advances, or inappropriate comments.
+   - Stalking, following, or intimidating behavior (online or offline).
+   - Threats of violence or violent language directed at any person.
+   - Deliberate intimidation or bullying.
+
+2. DISCRIMINATION
+   - Discriminatory jokes, language, or behavior based on any protected
+     characteristic (gender, caste, religion, etc.).
+   - Exclusion or marginalization of individuals.
+   - Casteist, sexist, racist, homophobic, or ableist remarks.
+
+3. MISUSE OF PLATFORM
+   - Using Seekho for dating, solicitation, or any non-educational purpose.
+   - Spamming, scamming, or phishing other users.
+   - Creating fake accounts or manipulating reviews/aura scores.
+   - Selling, promoting, or advertising products/services without approval.
+   - Using the platform to collect personal data for unauthorized purposes.
+
+4. ACADEMIC DISHONESTY
+   - Using Seekho to complete assignments, exams, or coursework on behalf
+     of another student (cheating-as-a-service).
+   - Plagiarism or helping others plagiarize.
+
+5. INTELLECTUAL PROPERTY VIOLATIONS
+   - Sharing copyrighted materials without permission.
+   - Copying or replicating Seekho's platform, features, or branding.
+   - Reverse engineering or scraping the platform.
+
+6. HARMFUL CONTENT
+   - Sharing illegal, violent, or explicit content.
+   - Promoting substance abuse, self-harm, or dangerous activities.
+   - Spreading misinformation or propaganda.
+
+7. DISRUPTION
+   - Deliberately disrupting sessions, events, or community activities.
+   - Trolling, flame wars, or sustained negativity.
+   - Abusing the reporting system with false or malicious reports.
+
+================================================================================
+                     COMMUNITY CHAPTERS
+================================================================================
+
+Each college community chapter must:
+
+1. Follow this Code of Conduct in all activities.
+2. Have at least one designated moderator/ambassador.
+3. Not use the Seekho brand for unauthorized purposes.
+4. Not collect money on behalf of Seekho without written authorization.
+5. Not organize events that contradict Seekho's values.
+6. Report any incidents to the Seekho core team within 24 hours.
+
+================================================================================
+                     EVENT GUIDELINES
+================================================================================
+
+All Seekho-affiliated events (online and offline) must:
+
+1. Be inclusive and open to all eligible participants.
+2. Have a designated Code of Conduct contact person.
+3. Provide a safe way for attendees to report violations.
+4. Not serve alcohol or promote substance use.
+5. Follow venue safety guidelines and local regulations.
+6. Have at least 2 organizers present at all times.
+7. Not be used for political campaigning or religious proselytizing.
+
+================================================================================
+                REPORTING & ENFORCEMENT
+================================================================================
+
+------------------------------------------------------------------------
+HOW TO REPORT
+------------------------------------------------------------------------
+
+If you experience or witness a violation, you can report it through:
+
+1. IN-APP: Use the "Report" button on any profile, session, or message.
+2. EMAIL: conduct@seekho.app (or your actual email)
+3. AMBASSADOR: Contact your college's campus ambassador directly.
+4. ANONYMOUS: Use the anonymous report form at seekho.app/report
+
+All reports are treated CONFIDENTIALLY. We will never reveal a reporter's
+identity without their explicit consent, except where required by law.
+
+------------------------------------------------------------------------
+WHAT HAPPENS AFTER A REPORT
+------------------------------------------------------------------------
+
+1. ACKNOWLEDGMENT: We acknowledge receipt within 24 hours.
+2. INVESTIGATION: Our team reviews the report, gathers evidence, and
+   contacts relevant parties within 48-72 hours.
+3. DECISION: A resolution is determined based on the severity.
+4. COMMUNICATION: Both parties are informed of the outcome.
+5. APPEAL: The accused party may appeal within 7 days.
+
+------------------------------------------------------------------------
+ENFORCEMENT ACTIONS
+------------------------------------------------------------------------
+
+Violations will result in consequences proportional to the severity:
+
+LEVEL 1 - WARNING
+- First-time minor violations.
+- Written warning via email/in-app notification.
+- Violation recorded on account.
+
+LEVEL 2 - TEMPORARY RESTRICTION
+- Repeated minor violations or moderate violations.
+- Temporary suspension of account (7-30 days).
+- Removal from community events during suspension.
+- Loss of aura points.
+
+LEVEL 3 - PERMANENT BAN
+- Severe violations or repeated moderate violations.
+- Permanent removal from the platform and all communities.
+- Ban from all Seekho events.
+- Notification to campus ambassador and college authorities
+  (if applicable and appropriate).
+
+LEVEL 4 - LEGAL ACTION
+- Illegal activities, threats of violence, or data theft.
+- Permanent ban plus referral to law enforcement.
+- Legal proceedings as deemed necessary.
+
+NOTE: Seekho reserves the right to take any enforcement action at any
+level, regardless of prior warnings, depending on the severity of the
+violation.
+
+================================================================================
+                     AMBASSADOR RESPONSIBILITIES
+================================================================================
+
+Campus Ambassadors have an elevated responsibility to:
+
+1. Lead by example and uphold this Code of Conduct at all times.
+2. Actively moderate their college's community.
+3. Respond to reports and escalate to the core team when needed.
+4. Not abuse their moderator privileges.
+5. Attend mandatory training on handling violations.
+
+Ambassadors who violate this Code of Conduct will face stricter
+consequences, including immediate removal from the ambassador program.
+
+================================================================================
+                     CHANGES & UPDATES
+================================================================================
+
+Seekho reserves the right to update this Code of Conduct at any time.
+Significant changes will be communicated to all users via email and
+in-app notification. Continued use of the platform after changes
+constitutes acceptance of the updated Code of Conduct.
+
+================================================================================
+                     CONTACT
+================================================================================
+
+For questions about this Code of Conduct:
+Email: ___________________________
+Website: ___________________________
+
+================================================================================
+              "Learn together. Grow together. Respect always."
+================================================================================
+
+NOTE: This Code of Conduct is adapted from best practices including the
+Contributor Covenant and various community guidelines. Customize the
+contact details and reporting channels before publishing.
